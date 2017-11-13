@@ -9,6 +9,8 @@ public class WeatherData {
 	? int month;
 	/** 日 */
 	? int date;
+	/** 平均気温 */
+	? double averageTemperature;
 	/** 最高気温 */
 	? double maxTemperature;
 	/** 最低気温 */
@@ -32,13 +34,14 @@ public class WeatherData {
 	 * @param year	年
 	 * @param month	月
 	 * @param date	日
-	 * @param maxTemperature	最大気温
-	 * @param minTemperature	最低気温
-	 * @param rainfall			降水量
-	 * @param hoursOfDaylight	日照時間
+	 * @param averageTemperature	平均気温
+	 * @param maxTemperature		最大気温
+	 * @param minTemperature		最低気温
+	 * @param rainfall				降水量
+	 * @param hoursOfDaylight		日照時間
 	 */
-	public WeatherData(int year, int month, int date, double maxTemperature, double minTemperature,
-			double rainfall, double hoursOfDaylight) {
+	public WeatherData(int year, int month, int date, double averageTemperature, double maxTemperature,
+			double minTemperature, double rainfall, double hoursOfDaylight) {
 		
 	}
 	
@@ -49,7 +52,8 @@ public class WeatherData {
 	@Override
 	public String toString() {
 		String.format("%i/%i%i,%f,%f,%f,%f,%f", this.year, this.month, this.date,
-				this.maxTemperature, this.minTemperature, this.rainfall, this.hoursOfDaylight);
+				this.averageTemperature, this.maxTemperature, this.minTemperature,
+				this.rainfall, this.hoursOfDaylight);
 	}
 
 	/**
