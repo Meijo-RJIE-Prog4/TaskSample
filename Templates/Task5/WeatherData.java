@@ -41,9 +41,19 @@ public class WeatherData {
 			double rainfall, double hoursOfDaylight) {
 		
 	}
+	
+	/**
+	 * 気象データをCSV形式（コンマ区切り）の文字列として出力するメソッド
+	 * @return 気象データ（日付,平均気温,最高気温,最低気温,降水量,日照時間）
+	 */
+	@Override
+	public String toString() {
+		String.format("%i/%i%i,%f,%f,%f,%f,%f", this.year, this.month, this.date,
+				this.maxTemperature, this.minTemperature, this.rainfall, this.hoursOfDaylight);
+	}
 
 	/**
-	 * 月間の気象情報を出力する関数
+	 * 月間の気象情報を出力するメソッド
 	 * ※メソッドのアクセス修飾子は変更しないこと
 	 */
 	public static void showMonthlySummary() {
